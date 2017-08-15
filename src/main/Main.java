@@ -44,8 +44,24 @@ public class Main {
 		tree.train(trainingData, features);
 		
 		// print tree after training
-        tree.printTree();
-
+        //tree.printTree();
+		
+		// read test data
+        List<DataSample> testingData = readData(false);
+        List<String> predictions = Lists.newArrayList();
+        
+        // classify all test data
+        for (DataSample dataSample : testingData) {
+            predictions.add(dataSample.getValue("PassengerId").get() + "," + tree.classify(dataSample).getPrintValue());
+        }
+        // write predictions to file
+        FileWriter fileWriter = new FileWriter(new File("predictions.csv"));
+        fileWriter.append("PassengerId,Survived").append("\n");
+        for (String prediction : predictions) {
+            fileWriter.append(prediction).append("\n");
+        }
+        fileWriter.flush();
+        fileWriter.close();
 	}
 	
 	private static List<Feature> getFeatures() {
