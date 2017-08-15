@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import data.DataSample;
 import feature.Feature;
 import impurity.GiniIndexImpurityCalculation;
+import impurity.EntropyCalculationMethod;
 import impurity.ImpurityCalculationMethod;
 import label.Label;
 
@@ -32,13 +33,15 @@ public class DecisionTree {
     private Node root;
 	
     /** Impurity calculation method. */
-    private ImpurityCalculationMethod impurityCalculationMethod = new GiniIndexImpurityCalculation();
+    //private ImpurityCalculationMethod impurityCalculationMethod = new GiniIndexImpurityCalculation();
+    private ImpurityCalculationMethod impurityCalculationMethod = new EntropyCalculationMethod();
     
     /**
      * When data is considered homogeneous and node becomes leaf and is labeled. If it is equal 1.0 then absolutely all
      * data must be of the same label that node would be considered a leaf.
      */
     private double homogenityPercentage = 0.90;
+    //private double homogenityPercentage = 0.70;
     
     /**
      * Max depth parameter. Growth of the tree is stopped once this depth is reached. Limiting depth of the tree can

@@ -44,7 +44,7 @@ public class Titanic {
 		tree.train(trainingData, features);
 		
 		// print tree after training
-        //tree.printTree();
+        tree.printTree();
 		
 		// read test data
         List<DataSample> testingData = readData(false);
@@ -121,7 +121,6 @@ public class Titanic {
 	}
 	
 	private static CellProcessor[] getProcessors(boolean training) {
-		// TODO fix this is ugly
         if (training) {
             final CellProcessor[] processors = new CellProcessor[] { 
                     new Optional(new ParseInt()),

@@ -45,7 +45,23 @@ public class SimpleTable {
 		
 		// print tree after training
         tree.printTree();
-
+        
+        // Ler os dados de teste
+        List<DataSample> testingData = readData(false);
+        List<String> predictions = Lists.newArrayList();
+        
+        // classifica todos os dados
+        for (DataSample dataSample : testingData) {
+            predictions.add(dataSample.getValue("ID").get() + "," + tree.classify(dataSample).getPrintValue());
+        }
+        // escreve no arquivo de previões
+        FileWriter fileWriter = new FileWriter(new File("predictions_simpleTable.csv"));
+        fileWriter.append("ID,Y").append("\n");
+        for (String prediction : predictions) {
+            fileWriter.append(prediction).append("\n");
+        }
+        fileWriter.flush();
+        fileWriter.close();
 	}
 	
 	private static List<Feature> getFeatures() {
@@ -56,8 +72,10 @@ public class SimpleTable {
 		Feature oneA2 = newFeature("A2", 1);
 		Feature zeroA3 = newFeature("A3", 0);
 		Feature oneA3 = newFeature("A3", 1);
+		Feature zeroA4 = newFeature("A4", 0);
+		Feature oneA4 = newFeature("A4", 1);
 				
-        return Arrays.asList(zeroA1, oneA1, zeroA2, oneA2, zeroA3, oneA3);
+        return Arrays.asList(zeroA1, oneA1, zeroA2, oneA2, zeroA3, oneA3, zeroA4, oneA4);
 	}
 	
 	private static List<DataSample> readData(boolean training) throws IOException {
@@ -86,15 +104,17 @@ public class SimpleTable {
                     new Optional(new ParseBooleanLabel()),
                     new Optional(new ParseBooleanLabel()),
                     new Optional(new ParseBooleanLabel()),
+                    new Optional(new ParseBooleanLabel()),
                     new Optional(new ParseBooleanLabel())
             };
             return processors;
         } else {
             final CellProcessor[] processors = new CellProcessor[] { 
             		 new Optional(new ParseInt()),
-                     new Optional(new ParseInt()),
-                     new Optional(new ParseInt()),
-                     new Optional(new ParseInt())
+                     new Optional(new ParseBooleanLabel()),
+                     new Optional(new ParseBooleanLabel()),
+                     new Optional(new ParseBooleanLabel()),
+                     new Optional(new ParseBooleanLabel())
             };
             return processors;
         }
