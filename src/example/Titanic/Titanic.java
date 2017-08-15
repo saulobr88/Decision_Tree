@@ -1,4 +1,4 @@
-package test.Titanic;
+package example.Titanic;
 
 import static feature.P.betweenD;
 import static feature.P.lessThanD;

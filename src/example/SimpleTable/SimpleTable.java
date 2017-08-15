@@ -1,4 +1,4 @@
-package test.SimpleTable;
+package example.SimpleTable;
 
 import static feature.P.betweenD;
 import static feature.P.lessThanD;
@@ -83,10 +83,10 @@ public class SimpleTable {
         if (training) {
             final CellProcessor[] processors = new CellProcessor[] { 
                     new Optional(new ParseInt()),
-                    new Optional(new ParseInt()),
-                    new Optional(new ParseInt()),
-                    new Optional(new ParseInt()),
-                    new Optional(new ParseInt())
+                    new Optional(new ParseBooleanLabel()),
+                    new Optional(new ParseBooleanLabel()),
+                    new Optional(new ParseBooleanLabel()),
+                    new Optional(new ParseBooleanLabel())
             };
             return processors;
         } else {
