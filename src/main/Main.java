@@ -52,11 +52,11 @@ public class Main {
         
         // classify all test data
         for (DataSample dataSample : testingData) {
-            predictions.add(dataSample.getValue("PassengerId").get() + "," + tree.classify(dataSample).getPrintValue());
+            predictions.add(dataSample.getValue("ID").get() + "," + tree.classify(dataSample).getPrintValue());
         }
         // write predictions to file
-        FileWriter fileWriter = new FileWriter(new File("predictions.csv"));
-        fileWriter.append("PassengerId,Survived").append("\n");
+        FileWriter fileWriter = new FileWriter(new File("predictions_bbc.csv"));
+        fileWriter.append("ID,class").append("\n");
         for (String prediction : predictions) {
             fileWriter.append(prediction).append("\n");
         }
