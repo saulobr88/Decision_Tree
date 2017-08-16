@@ -1,5 +1,5 @@
 ID,A1,A2,Y
-1,male,yes,1
-2,female,yes,1
-3,male,no,1
-4,female,no,0
+1,male,yes,0
+2,female,yes,0
+3,male,no,0
+4,female,no,1

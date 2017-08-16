@@ -70,12 +70,7 @@ public class SimpleTable {
         Feature isFemale = newFeature("A1", "female");
 		Feature yesA2 = newFeature("A2", "yes");
 		Feature noA2 = newFeature("A2", "no");
-		//Feature zeroA3 = newFeature("A3", 0);
-		//Feature oneA3 = newFeature("A3", 1);
-		//Feature zeroA4 = newFeature("A4", 0);
-		//Feature oneA4 = newFeature("A4", 1);
-				
-        //return Arrays.asList(zeroA1, oneA1, zeroA2, oneA2, zeroA3, oneA3, zeroA4, oneA4);
+		
 		return Arrays.asList(isMale, isFemale, yesA2, noA2);
 	}
 	
