@@ -54,7 +54,7 @@ public class SimpleTable {
         for (DataSample dataSample : testingData) {
             predictions.add(dataSample.getValue("ID").get() + "," + tree.classify(dataSample).getPrintValue());
         }
-        // escreve no arquivo de previıes
+        // escreve no arquivo de previ√µes
         FileWriter fileWriter = new FileWriter(new File("predictions_simpleTable.csv"));
         fileWriter.append("ID,Y").append("\n");
         for (String prediction : predictions) {
@@ -65,7 +65,7 @@ public class SimpleTable {
 	}
 	
 	private static List<Feature> getFeatures() {
-		// Quais s„o os atributos e seus possÌveis valores
+		// Quais s√£o os atributos e seus poss√≠veis valores
 		Feature isMale = newFeature("A1", "male");
         Feature isFemale = newFeature("A1", "female");
 		Feature yesA2 = newFeature("A2", "yes");

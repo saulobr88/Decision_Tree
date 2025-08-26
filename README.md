@@ -1,19 +1,19 @@
-# ¡rvore de Decis„o
-Projeto da Disciplina InteligÍncia Artificial do curso de Bacharelado em CiÍncia da ComputaÁ„o - UFRPE 2017.1
+# √Årvore de Decis√£o
+Projeto da Disciplina Intelig√™ncia Artificial do curso de Bacharelado em Ci√™ncia da Computa√ß√£o - UFRPE 2017.1
 
 #### Pre-requisitos
 * JDK 8 ou maior
 * Apache Maven 3.5 ou maior
 
-InstruÁıes de instalaÁ„o do Java 8 e Apache Maven podem ser encontradas aqui:
+Instru√ß√µes de instala√ß√£o do Java 8 e Apache Maven podem ser encontradas aqui:
 
-[Java 8 Install] (http://docs.oracle.com/javase/8/docs/technotes/guides/install/)
+[Java 8 Install](https://docs.oracle.com/javase/8/docs/technotes/guides/install/)
 
-[Apache Maven Install] (http://maven.apache.org/download.cgi#Installation)
+[Apache Maven Install](https://maven.apache.org/download.cgi#Installation)
 
-VocÍ tambÈm pode instalar [Eclipse IDE Java EE Developers](https://www.eclipse.org/downloads/) e o cliente GIT. 
+Voc√™ tamb√©m pode instalar [Eclipse IDE Java EE Developers](https://www.eclipse.org/downloads/) e o cliente GIT. 
 
-#### InstalaÁ„o (Setup)
+#### Instala√ß√£o (Setup)
 ```
 git clone https://github.com/saulobr88/Decision_Tree.git DecisionTree
 cd DecisionTree
@@ -21,5 +21,5 @@ mvn clean install
 ```
 
 #### Sobre o projeto
-O projeto È uma implementaÁ„o de um classificador de textos utilizando ·rvore de decis„o.
-O foco È classificar as notÌcias do site BBC News, a base de dados pode ser encontrada em (http://mlg.ucd.ie/datasets/bbc.html)
+O projeto √© uma implementa√ß√£o de um classificador de textos utilizando √Årvore de decis√£o.
+O foco √© classificar as not√≠cias do site BBC News, a base de dados pode ser encontrada em (http://mlg.ucd.ie/datasets/bbc.html)

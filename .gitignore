@@ -4,3 +4,4 @@ bin
 .settings
 main.log
 prediction*
+.idea

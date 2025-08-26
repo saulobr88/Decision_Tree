@@ -44,7 +44,7 @@ public class Main {
 		tree.train(trainingData, features);
 		
 		// print tree after training
-        //tree.printTree();
+        tree.printTree();
 		
         /*
          * Testes
@@ -285,7 +285,7 @@ public class Main {
 	
 	private static CellProcessor[] getProcessors(boolean training) {
 
-		// Os tipos de dados de cada coluna, s„o 175 colunas para treino e 174 para teste 
+		// Os tipos de dados de cada coluna, s√£o 175 colunas para treino e 174 para teste 
         if (training) {
             final CellProcessor[] processors = new CellProcessor[] { 
                     new Optional(new ParseInt()),
